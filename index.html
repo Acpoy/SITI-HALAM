@@ -8,6 +8,81 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
+  
+
+  <!-- Background Music -->
+  <audio id="bgm1" src="audio/bgm1.mp3" loop></audio>
+  <audio id="bgm2" src="audio/bgm2.mp3" loop></audio>
+  <audio id="bgm3" src="audio/bgm3.mp3" loop></audio>
+
+  <!-- Music Button + Dropdown -->
+  <div id="music-wrapper">
+    <button id="music-btn" onclick="toggleMusicMenu()" title="Music">🎵</button>
+    <div id="music-menu" class="hidden">
+      <button id="track-btn-1" onclick="selectMusic(1)">🎵 Music 1</button>
+      <button id="track-btn-2" onclick="selectMusic(2)">🎵 Music 2</button>
+      <button id="track-btn-3" onclick="selectMusic(3)">🎵 Music 3</button>
+      <button id="track-btn-off" onclick="stopMusic()">🔇 Turn Off</button>
+    </div>
+  </div>
+
+  <style>
+    #music-wrapper {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+    #music-btn {
+      background: rgba(255, 182, 193, 0.9);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(255, 105, 135, 0.4);
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s, background 0.2s;
+    }
+    #music-btn:hover { transform: scale(1.15); background: rgba(255, 140, 165, 0.95); }
+    #music-btn.playing { animation: pulse-btn 1.8s ease-in-out infinite; }
+    @keyframes pulse-btn {
+      0%, 100% { box-shadow: 0 4px 14px rgba(255,105,135,0.4); }
+      50% { box-shadow: 0 4px 22px rgba(255,105,135,0.85); }
+    }
+    #music-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
+    }
+    #music-menu button {
+      background: rgba(255, 182, 193, 0.92);
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(255,105,135,0.3);
+      backdrop-filter: blur(6px);
+      transition: transform 0.15s, background 0.15s;
+      white-space: nowrap;
+      font-family: inherit;
+      color: #a0336a;
+      font-weight: 500;
+    }
+    #music-menu button:hover { transform: scale(1.05); background: rgba(255,140,165,0.95); }
+    #music-menu button.active-track {
+      background: rgba(255, 100, 140, 0.9);
+      color: #fff;
+    }
+    #music-menu.hidden { display: none; }
+  </style>
 
   <!-- Cursor sparkles container -->
   <div id="sparkle-container"></div>
