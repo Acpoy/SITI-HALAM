@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Siti Halam ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cursor sparkles container -->
+  <div id="sparkle-container"></div>
+
+  <!-- Hidden Hearts Hunt (placed throughout page) -->
+  <div class="hidden-heart" id="hh1" style="top:12%; left:3%;" data-msg="You found a secret ✨" data-n="1">🤍</div>
+  <div class="hidden-heart" id="hh2" style="top:38%; right:2%;" data-msg="I knew you would click this 💭" data-n="2">🤍</div>
+  <div class="hidden-heart" id="hh3" style="top:63%; left:1.5%;" data-msg="You're so observant 👀" data-n="3">🤍</div>
+  <div class="hidden-heart" id="hh4" style="top:82%; right:3%;" data-msg="Thank you for being you 🌸" data-n="4">🤍</div>
+  <div class="hidden-heart" id="hh5" style="top:95%; left:50%; transform:translateX(-50%);" data-msg="This website gets happier every time you smile 💗" data-n="5">🤍</div>
+
+  <!-- Heart Hunt HUD -->
+  <div id="hunt-hud">🤍 <span id="hunt-count">0</span> / 5 Hearts Found</div>
+
+  <!-- =========== HERO =========== -->
+  <section id="hero">
+    <div id="heart-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub fade-up">Hello,</p>
+      <h1 class="hero-title fade-up">Siti Halam <span class="pulse-heart">❤️</span></h1>
+      <p class="hero-desc fade-up">This little corner of the internet was made especially for you.</p>
+      <button class="btn-main fade-up" onclick="smoothTo('reasons')">Start Exploring</button>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 1 — REASONS =========== -->
+  <section id="reasons" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">100 Reasons Why You're Amazing</h2>
+      <div class="card reason-card">
+        <p id="reason-text" class="reason-text">Click the button to reveal a reason 💗</p>
+        <button class="btn-main" onclick="revealReason()">💗 Reveal A Reason</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 2 — MOOD =========== -->
+  <section id="mood" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">How Are You Feeling Today?</h2>
+      <div class="mood-grid">
+        <div class="mood-card" onclick="showMood('happy')">
+          <span class="mood-icon">🌸</span>
+          <span class="mood-label">Happy</span>
+        </div>
+        <div class="mood-card" onclick="showMood('sad')">
+          <span class="mood-icon">☁️</span>
+          <span class="mood-label">Sad</span>
+        </div>
+        <div class="mood-card" onclick="showMood('tired')">
+          <span class="mood-icon">😴</span>
+          <span class="mood-label">Tired</span>
+        </div>
+        <div class="mood-card" onclick="showMood('stressed')">
+          <span class="mood-icon">😣</span>
+          <span class="mood-label">Stressed</span>
+        </div>
+      </div>
+      <div id="mood-message" class="mood-message hidden"></div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 3 — GARDEN =========== -->
+  <section id="garden" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">A Garden For Siti Halam 🌷</h2>
+      <p class="section-sub">Click inside the garden to plant flowers</p>
+      <div id="garden-area">
+        <p id="garden-hint">Tap anywhere here 🌱</p>
+        <div id="flower-count-display">🌸 <span id="flower-count">0</span> flowers</div>
+      </div>
+      <div id="garden-message" class="garden-msg hidden">A garden as beautiful as the person it was made for ✨</div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 4 — DATE IDEAS =========== -->
+  <section id="dates" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">What Should We Do Together?</h2>
+      <div class="card date-card">
+        <div id="date-idea-display">
+          <span class="date-emoji" id="date-emoji">💕</span>
+          <p id="date-text">Press the button to get an idea!</p>
+        </div>
+        <button class="btn-main" onclick="generateDate()">💗 Generate Date Idea</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 5 — MEMORY MACHINE =========== -->
+  <section id="memory" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Memory Machine</h2>
+      <p class="section-sub">Press the button to unlock a sweet memory</p>
+      <div class="card memory-card">
+        <p id="memory-text" class="memory-text">Press the button below ✨</p>
+        <button class="btn-glow" onclick="generateMemory()">Press Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 6 — LETTER =========== -->
+  <section id="letter" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">A Letter For Siti Halam 💌</h2>
+      <p class="section-sub">Click the envelope to open</p>
+      <div id="envelope-wrap">
+        <div id="envelope" onclick="openEnvelope()">
+          <div id="env-flap"></div>
+          <div id="env-body">
+            <span class="env-heart">💌</span>
+          </div>
+        </div>
+        <div id="letter-paper" class="hidden">
+          <p id="letter-content"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SECTION 7 — LOVE METER =========== -->
+  <section id="lovemeter" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Love Meter</h2>
+      <div class="card meter-card">
+        <div class="meter-wrap">
+          <div id="meter-bar"></div>
+        </div>
+        <p id="meter-label" class="meter-label">0%</p>
+        <p id="meter-final" class="meter-final hidden">There isn't a number big enough 💗</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FINAL SECTION =========== -->
+  <section id="finale" class="section reveal finale-section">
+    <div class="container">
+      <h2 class="section-title">One Last Thing ❤️</h2>
+      <button class="btn-main" id="finale-btn" onclick="triggerFinale()">Open</button>
+      <div id="finale-message" class="hidden finale-msg">
+        <p>Thank you for visiting this little website.</p>
+        <p>I hope it made you smile.</p>
+        <p>You are appreciated more than you know.</p>
+        <h3 class="finale-sign">❤️ For Siti Halam ❤️</h3>
+      </div>
+    </div>
+    <div id="heart-burst"></div>
+  </section>
+
+  <!-- Hunt Unlock Modal -->
+  <div id="hunt-modal" class="modal hidden">
+    <div class="modal-box">
+      <h2>Congratulations, Siti Halam ❤️</h2>
+      <p>You found every hidden heart, but you'll never find all the reasons you're amazing.</p>
+      <button class="btn-main" onclick="closeModal()">Close 💗</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
