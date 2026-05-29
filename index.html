@@ -6,7 +6,37 @@
   <title>For Siti Halam ❤️</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-</head>
+  <style>
+    /* —— Compliment Rain —— */
+    #rain-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 7777;
+      overflow: hidden;
+    }
+    .rain-drop {
+      position: absolute;
+      top: -3rem;
+      opacity: 0;
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      white-space: nowrap;
+      animation: rain-fall linear forwards;
+      text-shadow: 0 2px 8px rgba(255,100,150,0.18);
+    }
+    @keyframes rain-fall {
+      0%   { opacity: 0;   transform: translateY(0)      rotate(var(--r)); }
+      6%   { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { opacity: 0;   transform: translateY(105vh)  rotate(var(--r)); }
+    }
+    #rain-btn.active {
+      background: linear-gradient(135deg,#ff6b9d,#ffaac5);
+      color: #fff;
+      box-shadow: 0 6px 22px rgba(255,80,140,0.45);
+    }
+  </style></head>
 <body>
   
 
@@ -216,6 +246,21 @@
       </div>
     </div>
   </section>
+
+    <!-- =========== COMPLIMENT RAIN =========== -->
+  <section id="compliment-rain" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Compliment Rain 🌸</h2>
+      <p class="section-sub">A little shower of kind words, just for you</p>
+      <div class="card" style="text-align:center; padding:2rem 1.5rem;">
+        <button class="btn-main" id="rain-btn" onclick="toggleRain()">Make It Rain ❤️</button>
+        <p id="rain-hint" style="margin-top:1rem;font-size:0.85rem;color:#c0607a;opacity:0.75;min-height:1.2em;"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rain overlay (fixed, pointer-events:none so page still scrollable) -->
+  <div id="rain-container"></div>
 
   <!-- =========== FINAL SECTION =========== -->
   <section id="finale" class="section reveal finale-section">
