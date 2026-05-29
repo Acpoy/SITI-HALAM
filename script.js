@@ -4,6 +4,77 @@
 ============================================ */
 
 /* =========================================
+   0. MUSIC SYSTEM
+========================================= */
+let currentTrack = null;   // 1, 2, 3, or null
+let menuOpen = false;
+
+function getAudio(n) { return document.getElementById('bgm' + n); }
+
+function toggleMusicMenu() {
+  menuOpen = !menuOpen;
+  const menu = document.getElementById('music-menu');
+  menuOpen ? menu.classList.remove('hidden') : menu.classList.add('hidden');
+}
+
+function selectMusic(n) {
+  // Stop current track if any
+  if (currentTrack) {
+    getAudio(currentTrack).pause();
+    getAudio(currentTrack).currentTime = 0;
+  }
+
+  // Highlight active button, clear others
+  [1, 2, 3].forEach(i => document.getElementById('track-btn-' + i).classList.remove('active-track'));
+  document.getElementById('track-btn-' + n).classList.add('active-track');
+
+  // Play selected track
+  const audio = getAudio(n);
+  audio.loop = true;
+  audio.volume = 0.3;
+  audio.play().catch(() => {});
+  currentTrack = n;
+
+  // Update main button
+  const btn = document.getElementById('music-btn');
+  btn.textContent = '🎶';
+  btn.classList.add('playing');
+
+  // Close menu
+  menuOpen = false;
+  document.getElementById('music-menu').classList.add('hidden');
+}
+
+function stopMusic() {
+  if (currentTrack) {
+    getAudio(currentTrack).pause();
+    getAudio(currentTrack).currentTime = 0;
+    currentTrack = null;
+  }
+
+  // Clear highlights
+  [1, 2, 3].forEach(i => document.getElementById('track-btn-' + i).classList.remove('active-track'));
+
+  // Reset main button
+  const btn = document.getElementById('music-btn');
+  btn.textContent = '🎵';
+  btn.classList.remove('playing');
+
+  // Close menu
+  menuOpen = false;
+  document.getElementById('music-menu').classList.add('hidden');
+}
+
+// Close menu when tapping outside
+document.addEventListener('click', (e) => {
+  const wrapper = document.getElementById('music-wrapper');
+  if (wrapper && !wrapper.contains(e.target) && menuOpen) {
+    menuOpen = false;
+    document.getElementById('music-menu').classList.add('hidden');
+  }
+});
+
+/* =========================================
    1. CURSOR SPARKLES
 ========================================= */
 const sparkleContainer = document.getElementById('sparkle-container');
@@ -637,7 +708,7 @@ function openEnvelope() {
   }, 700);
 }
 
-function typewriterEffect(elId, text, speed = 30) {
+function typewriterEffect(elId, text, speed = 100) {
   const el = document.getElementById(elId);
   el.textContent = '';
   let i = 0;
