@@ -636,58 +636,11 @@ function generateMemory() {
 ========================================= */
 const letterText = `Dear Siti Halam,
 
-If you're reading this, I just want you to know how grateful I am that our paths crossed and that I had the chance to spend six years of my life with you.
+My beautiful girl ❤️,
 
-Six years may sound like just a number to some people, but to me, those years are filled with countless memories, lessons, laughter, struggles, and moments that I will always cherish. Through all the ups and downs, you became such an important part of my life, and for that, I will always be thankful.
+I honestly don't think I'll ever find the perfect words to describe how much you mean to me. Every single day, you give my heart another reason to fall in love with you all over again. You make ordinary moments feel magical, and somehow, just seeing your name pop up on my phone is enough to make me smile. 🤍 Thank you for being my peace when life gets loud, my comfort when everything feels heavy, and my happiness even on the darkest days. I love the way you laugh, the way you care, the way you always know how to make me feel better, and even the little things you don't notice about yourself. They're all the reasons my heart chose you and keeps choosing you every single day. No matter how many people I meet or where life takes me, there will never be another you. You're my safe place, my favorite person, and the most beautiful part of my life. ❤️
 
-There are so many things I wish I could say, and perhaps there are things I should have said much earlier.
-
-First of all, I am sorry.
-
-I am sorry for the mistakes I made throughout our journey together. I know I was not perfect, and I know there were times when I hurt you, disappointed you, or made you feel uncomfortable. Looking back now, there are many moments I wish I could do differently.
-
-I am sorry that I could not give you the things you deserved. I am sorry that I could not buy you a beautiful ring, surprise you with flowers, or give you gifts like other boyfriends do. It was never because I didn't want to. The truth is, I always wanted to make you happy, but sometimes I simply wasn't capable of giving you everything I wished I could.
-
-I am sorry for the times when you needed me and I wasn't there. I am sorry for the moments when you felt alone when I should have been standing beside you. I know there were times when my presence, support, or understanding could have made things easier for you, and I deeply regret not being better in those moments.
-
-I am sorry for the times I got angry. Out of all the memories we share, one thing that still weighs heavily on my heart is how I treated you when we worked at the burger shop. I still remember those moments, and honestly, I regret them so much. I hate knowing that I made someone I love feel hurt because of my temper. If I could go back in time, I would choose patience, understanding, and kindness every single time.
-
-I am truly sorry.
-
-Even after all these years, one thing has never changed.
-
-I love you.
-
-I love your smile.
-I love your laugh.
-I love the way you care about people.
-I love the little things about you that most people probably don't even notice.
-
-Thank you for every memory.
-Thank you for every conversation.
-Thank you for every moment you stayed.
-Thank you for every moment you chose us.
-
-You have brought happiness into my life in ways I can never fully explain. Even on difficult days, just knowing you were there often gave me strength.
-
-If there is one thing I hope you can feel while reading this letter, it is how much I appreciate you.
-
-You are important to me.
-You always have been.
-
-I know I cannot change the past. I cannot undo my mistakes, and I cannot erase the moments that caused pain. But if I could choose one thing, it would be for you to know that every apology written here comes from the deepest part of my heart.
-
-No matter what happens in the future, I will always be grateful for the six years we shared together.
-
-Please take care of yourself.
-Please continue chasing your dreams.
-Please continue smiling, because your smile has always been one of my favourite things in this world.
-
-And if there is still a small place for me in your heart, I hope that one day we can create new memories together, stronger, wiser, and kinder than before.
-
-Thank you for everything, Siti Halam.
-
-With all my love,
+I want you to know that my love for you isn't something that fades with time—it only grows stronger. I promise to stay by your side through the happy days, the difficult days, the messy days, and every little moment in between. I'll be the one cheering the loudest when you succeed, holding your hand when you're scared, and reminding you how amazing you are whenever you forget. If the world ever feels too heavy, let me carry some of that weight with you, because you'll never have to face anything alone as long as I'm here. I want to make memories with you, laugh until our stomachs hurt, travel to beautiful places, celebrate every little achievement, and grow old with you one day. You are my greatest blessing, my answered prayer, and the best thing that has ever happened to me. I love you more than yesterday, less than tomorrow, and more than words could ever explain. Thank you for being you, my love. I'll keep choosing you, loving you, and standing by you—today, tomorrow, and for the rest of my life. ❤️
 
 ❤️ Yours Always
 `;
